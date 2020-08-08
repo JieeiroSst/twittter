@@ -1,6 +1,7 @@
 <div class="col col-sm-7">
 <div class="row mb-3">
   <div class="col col-12 is-half">
+    <% if user_signed_in?%>
     <article class="media box">
       <figure class="media-left">
         <p class="image is-64x64">
@@ -11,6 +12,7 @@
         <%= render 'tweeets/form'%>
       </div>
     </aritcle>
+    <%end%>
       </div>
       </div>
     <div class="row">
@@ -25,10 +27,11 @@
               </div>
               <div class="media-content">
                 <div class="content">
-                  <strong>Alain Luu</strong><br/>
-                  <small>@AlainLuu</small><br/>
-                  <p><%= tweeet.tweeet%></p>
+                  <strong><%= tweeet.user.name%></strong><br/>
+                  <small><%= tweeet.user.username%></small><br/>
+                  <p><%= tweeet.tweeet %></p>
                 </div>
+                <% if user_signed_in?%>
                 <nav class="level">
                   <div class="level-left is-mobile">
                     <%= link_to tweeet, class:"level-item" do%>
@@ -42,6 +45,7 @@
                     <%end%>
                   </div>
                 </nav>
+                <%end%>
               </div>
             </article>
           </div>
