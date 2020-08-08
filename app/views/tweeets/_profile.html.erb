@@ -1,47 +1,8 @@
-<div class="column is-one-quarter">
+<div class="col col-sm-3 is-one-quarter">
   <nav class="panel">
-    <p class="panel-heading">Profile</p>
-    <div class="panel-block">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-64-64">
-            <img src="https://bulma.io/images/placeholders/64x64.png">
-          </figure>
-        </div>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong><%= current_user.email%></strong>
-              <strong><%= current_user.name%></strong>
-              <strong><%= current_user.username%></strong>
-            </p>
-          </div>
-        </div>
-        </div>
-      </article>
-    </div>
-    <div class="panel-block">
-      <div class="level is-mobile">
-        <div class="level-item has-centered-text">
-          <div>
-            <p class="heading">Tweets</p>
-            <p class="title is-6"><%= current_user.tweeets.count%></p>
-          </div>
-        </div>
-        <div class="level-item has-centered-text">
-          <div>
-            <p class="heading">Following</p>
-            <p class="title is-6"></p>
-          </div>
-        </div>
-        <div class="level-item has-centered-text">
-          <div>
-            <p class="heading">Follewer</p>
-            <p class="title is-6"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <strong>Email:<%= current_user.email%></strong><br/>
+    <strong>Following:<%= current_user.tweeets.count%></strong><br/>
+    <strong>Name:<%= current_user.name%></strong><br/>
+    <strong>UserName:<%= current_user.username%></strong><br/>
   </nav>
 </div>
