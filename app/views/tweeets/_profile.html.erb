@@ -1,8 +1,9 @@
 <div class="col col-sm-3 is-one-quarter">
+  <p class="panel-heading">Profile</p>
   <nav class="panel">
     <strong>Email:<%= current_user.email%></strong><br/>
     <strong>Following:<%= current_user.tweeets.count%></strong><br/>
     <strong>Name:<%= current_user.name%></strong><br/>
-    <strong>UserName:<%= current_user.username%></strong><br/>
+    <strong>UserName:@<%= current_user.username%></strong><br/>
   </nav>
 </div>
