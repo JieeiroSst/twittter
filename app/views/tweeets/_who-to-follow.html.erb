@@ -1,6 +1,7 @@
 <div class="col col-2">
   <nav class="panel">
     <p class="panel-heading">who to follow</p>
+    <% if user_signed_in?%>
     <div class="panel-block">
       <article class="media">
         <div class="media-left">
@@ -11,7 +12,7 @@
 
         <div class="media-content">
           <div class="content">
-            <% if user_signed_in?%>
+
             <strong><%= current_user.name%></strong><br/>
             <small><%= current_user.username%></small>
             <%else%>
